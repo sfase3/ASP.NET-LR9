@@ -1,0 +1,5 @@
+﻿@{
+    ViewData["Title"] = "Weather";
+    string cityName = "Mykolaiv";
+}
+@await Component.InvokeAsync("Weather", new { cityName = cityName })

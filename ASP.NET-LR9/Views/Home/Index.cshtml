@@ -1,0 +1,11 @@
+﻿@using ASP.NET_LR9.Models;
+@{
+    ViewData["Title"] = "Home Page";
+    List<Product> products = new List<Product>() {
+        new Product { Id = 1, Name = "Spider Man 2", Price = 80},
+        new Product { Id = 2, Name = "Alan Wake 2", Price = 60},
+        new Product { Id = 3, Name = "Dying Light 2", Price = 40}
+
+    };
+}
+@await Component.InvokeAsync("Table", new { products = products })
